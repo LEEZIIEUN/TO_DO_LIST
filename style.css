@@ -1,0 +1,63 @@
+body {
+  margin: 0;
+  background-image: url("./images/background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  min-width: 300px;
+}
+
+.input-area {
+  margin-bottom: 10px;
+}
+
+.container {
+  background-color: white;
+  min-height: 100vh;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.task-area{
+  border: 1px solid lightgray;
+}
+
+.achieve-area {
+  margin-top: 10px;
+  padding: 10px;
+  border: 1px solid lightgray;
+  text-align: center;
+}
+
+.task-tabs {
+  display: flex;
+  position: relative;
+  justify-content: center;
+}
+
+.task-tabs div {
+  text-decoration: none;
+  padding: 1em;
+  border-bottom: 1px solid lightgray;
+  width: 200px;
+  text-align: center;
+  margin: 1em;
+  border-radius: 3px;
+}
+
+.task, .task-done {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+}
+
+.task-done > div:first-child{
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.task-tabs div {
+  cursor: pointer;
+}
+
+.task-tabs div:hover {
+  background-color: #F6EBFF;
+}
