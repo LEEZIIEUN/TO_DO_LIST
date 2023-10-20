@@ -10,6 +10,7 @@ let taskInput = document.getElementById("task-input");
 let addButton = document.getElementById("add-button");
 let chartButton = document.getElementById("chart-button");
 let tabs = document.querySelectorAll(".task-tabs div");
+let underLine =document.querySelector("#under-line");
 let taskList = new Set;
 let filterList = new Set();
 let doneList = new Set();
@@ -17,10 +18,21 @@ let mode = 'all';
 let showingChart = false;
 let list = {};
 
-for(let i = 0; i<tabs.length; i++){
+for(let i = 1; i<tabs.length; i++){
   tabs[i].addEventListener("click",function(event){
     filter(event)});
 }
+
+let underLineIndicator = (e) => {
+  underLine.style.left = e.currentTarget.offsetLeft - 15 +'px';
+  underLine.style.width = e.currentTarget.offsetWidth + 'px';
+  underLine.style.top =
+    e.currentTarget.offsetTop + e.currentTarget.offsetHeight -19+ 'px';
+};
+
+tabs.forEach((menu) =>
+  menu.addEventListener('click', (e) => underLineIndicator(e))
+);
 
 addButton.addEventListener("click", addTask);
 chartButton.addEventListener("click", function(event){
